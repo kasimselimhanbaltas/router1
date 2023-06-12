@@ -119,9 +119,9 @@ function updateImage(direction: number) {
       selectedImage = selectedProject.images[store.imageIndex];
       setTimeout(() => {
         imageContainer.classList.remove('slideRight');
-      }, 300);
+      }, 420);
 
-    }, 300);
+    }, 180);
   } else if (direction === -1 && imageContainer) {
     imageContainer.classList.add('slideLeft');
     setTimeout(() => {
@@ -136,8 +136,8 @@ function updateImage(direction: number) {
       selectedImage = selectedProject.images[store.imageIndex];
       setTimeout(() => {
         imageContainer.classList.remove('slideLeft');
-      }, 300);
-    }, 300);
+      }, 420);
+    }, 180);
   }
 }
 
@@ -178,12 +178,12 @@ function getSelectedImage() {
     transform: translateX(0) scale(1);
   }
 
-  49% {
+  30% {
     opacity: 0;
     transform: translateX(-100px) scale(0.95);
   }
 
-  50% {
+  60% {
     opacity: 0;
     transform: translateX(150px) scale(0.95);
   }
@@ -204,12 +204,12 @@ function getSelectedImage() {
     transform: translateX(0) scale(1);
   }
 
-  49% {
+  30% {
     opacity: 0;
     transform: translateX(100px) scale(.95);
   }
 
-  50% {
+  60% {
     opacity: 0;
     transform: translateX(-150px) scale(.95);
   }
