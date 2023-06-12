@@ -1,30 +1,42 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <Head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <Title>Selimhan Baltaş</Title>
+  </Head>
+  <div id="#app">
+    <NavbarComponent></NavbarComponent>
+    <div id="maincontainer">
+      <router-view/>
+    </div>
+    <FooterComponent></FooterComponent>
+  </div>
 </template>
 
+<script setup>
+import FooterComponent from "@/components/FooterComponent.vue"
+import NavbarComponent from "@/components/NavbarComponent.vue"
+
+
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+#maincontainer {
+  min-height: 85vh;
+}
+#app{
+  background-color: #161616;
+  min-height: 100vh;
 }
 
-nav {
-  padding: 30px;
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }
 </style>
