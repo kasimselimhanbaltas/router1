@@ -15,7 +15,7 @@
             <router-link to="/projects"  :class="'nav-link' + isActive('projects')"> <span> Projects </span> </router-link>
           </li>
           <li class="nav-item">
-            <router-link :class="'nav-link' + isActive('minigame')" to="/"><span> Mini Game </span></router-link>
+            <router-link class="nav-link disabled"  to="/"><span> Mini Game </span></router-link>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
